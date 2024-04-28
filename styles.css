@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-color: #2b2b2b;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.password-form {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.password-form input[type=password] {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.password-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.day-button, .save-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.day-button {
+    background-color: #4CAF50;
+    color: white;
+    margin-right: 10px;
+}
+
+.workout {
+    padding: 20px;
+}
+
+.workout h2 {
+    color: #2b2b2b;
+    text-align: center;
+}
+
+.workout ul {
+    list-style: none;
+    padding: 0;
+}
+
+.workout ul li {
+    margin-bottom: 10px;
+}
+
+.workout input[type=text] {
+    padding: 8px;
+    font-size: 14px;
+    width: 80px;
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}

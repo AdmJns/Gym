@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainingsplan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Mein Trainingsplan (Karl)</h1>
+    </div>
+    <div class="container">
+        <div id="workout" class="workout">
+            <div class="buttons">
+                <button onclick="showTuesday()" id="tuesdayButton" style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 12px;">Dienstag</button>
+                <button onclick="showFriday()" id="fridayButton" style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 12px;">Freitag</button>
+            </div>
+            <div id="tuesdayContent" class="content" style="display:none;">
+                <h2>Dienstag</h2>
+                <ul>
+                    <li>Latzug (Übergriff): <input type="text" id="latzug_uebergriff_tim" placeholder="Karl"><button onclick="showGif('latzug_uebergriff')">Zeige Latzug (Übergriff) GIF</button>
+                    <li>Latzug (Untergriff): <input type="text" id="latzug_untergriff_tim" placeholder="Karl"><button onclick="showGif('latzug_untergriff')">Zeige Latzug (Untergriff) GIF</button>
+                    <li>Rudern: <input type="text" id="rudern_tim" placeholder="Karl"><button onclick="showGif('rudern')">Zeige Rudern GIF</button>
+                    <li>Cable Curls: <input type="text" id="cable_curls_tim" placeholder="Karl"><button onclick="showGif('cable_curls')">Zeige Cable Curls GIF</button>
+                    <li>Bizeps Curls: <input type="text" id="bizeps_curls_tim" placeholder="Karl"><button onclick="showGif('bizeps_curls')">Zeige Bizeps Curls GIF</button>
+                </ul>
+                <div id="tuesdayGifContainer"></div>
+            </div>
+            <div id="fridayContent" class="content" style="display:none;">
+                <h2>Freitag</h2>
+                <ul>
+                    <li>Latzug: <input type="text" id="latzug_tim" placeholder="Karl"><button onclick="showGif('latzug')">Zeige Latzug GIF</button>
+                    <li>Negative Liegestütz: <input type="text" id="negative_liegestuetz_tim" placeholder="Karl"><button onclick="showGif('negative_liegestuetz')">Zeige Negative Liegestütz GIF</button>
+                    <li>Butterfly: <input type="text" id="butterfly_tim" placeholder="Karl"><button onclick="showGif('butterfly')">Zeige Butterfly GIF</button>
+                    <li>Seitheben: <input type="text" id="seitheben_tim" placeholder="Karl"><button onclick="showGif('seitheben')">Zeige Seitheben GIF</button>
+                    <li>Trizepsdrücken: <input type="text" id="trizepsdruecken_tim" placeholder="Karl"><button onclick="showGif('trizepsdruecken')">Zeige Trizepsdrücken GIF</button>
+                 </ul>
+                <div id="fridayGifContainer"></div>
+            </div>
+            <button onclick="saveWeights()" style="background-color: #272829; color: white; border: none; padding: 10px 20px; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer;">Gewichte speichern</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

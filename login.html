@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            background-color: #2b2b2b;
+            color: black;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #ffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input {
+            padding: 8px;
+            margin: 5px;
+            border-radius: 5px;
+            border: 1px solid #64ff4a;
+            background-color: #a2ff92;
+            color: black;
+        }
+        button {
+            padding: 8px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #64ff4a;
+            color: #0a192f;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form onsubmit="return loginUser()">
+            <input type="text" id="username" placeholder="Username" required><br>
+            <input type="password" id="password" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function loginUser() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Hier kannst du die Benutzerinformationen definieren
+            var users = {
+                'Tim': 'So9',
+                'Mark': '1309',
+                'Karl': 'Dr7'
+            };
+
+            // Überprüfen, ob der Benutzername und das Passwort übereinstimmen
+            if (users.hasOwnProperty(username) && users[username] === password) {
+                // Weiterleitung basierend auf dem Benutzernamen
+                switch (username) {
+                    case 'Tim':
+                        window.location.href = "tim.html";
+                        break;
+                    case 'Mark':
+                        window.location.href = "mark.html";
+                        break;
+                    case 'Karl':
+                        window.location.href = "karl.html";
+                        break;
+                    default:
+                        window.location.href = "main.html";
+                        break;
+                }
+            } else {
+                alert("Falscher Benutzername oder Passwort.");
+            }
+
+            // Verhindern des tatsächlichen Absendens des Formulars
+            return false;
+        }
+    </script>
+</body>
+</html>
